@@ -1,0 +1,182 @@
+.hero-container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px; /* Add padding for space around content */
+  color: white;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Darken the video for better text visibility */
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text-container1 {
+  text-align: left; /* Align text to the left */
+  z-index: 1;
+  max-width: 50%; /* Restrict width */
+}
+
+.intro-text {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  opacity: 0;
+  transform: translateY(-50px); /* Popping from above */
+  animation: popIn 1.5s forwards;
+}
+
+.intro-text.second {
+  transform: translateY(-50px); /* Popping from above */
+  animation: popIn 1.5s 0.5s forwards;
+}
+
+.sub-text {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  font-weight: 300;
+  opacity: 0;
+  animation: popIn 1.5s 1.5s forwards;
+}
+
+.image-container1 {
+  z-index: 1;
+  max-width: 40%; /* Restrict width */
+}
+
+.profile-image {
+  width: 60%;
+  max-width: 300px; /* Limit image size */
+  opacity: 0;
+  transform: translateY(-100px); /* Start from above */
+  animation: popIn 1.5s 2s forwards, shapeChange 4s infinite;
+}
+
+/* Keyframes for popping animation */
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for shape-changing animation */
+@keyframes shapeChange {
+  0% {
+    border-radius: 0%; /* Square */
+  }
+  25% {
+    border-radius: 50%; /* Circle */
+  }
+  50% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Weird shape */
+  }
+  75% {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; /* Another weird shape */
+  }
+  100% {
+    border-radius: 0%; /* Back to Square */
+  }
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #a6b4c2;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .hero-container {
+    padding: 0 30px;
+  }
+
+  .text-container1 {
+    max-width: 60%;
+    padding: 69px 80px 0 0;
+
+  }
+
+  .image-container1 {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-container1, .image-container {
+    max-width: 60%;
+  }
+
+  .profile-image {
+    width: 80%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 2.5rem;
+  }
+
+  .sub-text {
+    font-size: 1.5rem;
+  }
+  
+  .profile-image {
+    width: 90%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .intro-text {
+    font-size: 2rem;
+  }
+
+  .sub-text {
+    font-size: 1.2rem;
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .hero-container {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,101 @@
+.contact-container {
+    padding: 50px;
+    text-align: center;
+    background-color: #c6c0bb;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+  
+  .message {
+    font-size: 1.5rem;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    animation: fadeOut 4s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  .contact-heading {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-email {
+    font-size: 1.5rem;
+    color: #0073e6;
+    margin: 10px 0;
+  }
+  
+  .contact-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form input, form textarea {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  form input:focus, form textarea:focus {
+    border-color: #0073e6;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  form button:hover {
+    background-color: #005bb5;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #0073e6;
+  }
+  
+  .social-icons a:hover {
+    color: #005bb5;
+  }
+  

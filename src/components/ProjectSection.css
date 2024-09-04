@@ -1,0 +1,114 @@
+/* ProjectSection.css */
+
+#project-section {
+  padding: 50px 0;
+  background-color: #161616;
+  text-align: center;
+}
+
+.project-heading {
+  font-size: 2.5rem;
+  color: #faf6f6;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  position: relative;
+  width: 18%;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-title:hover {
+  color: #0073e6;
+}
+
+.project-subtitle {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Style for the GitHub link */
+.project-github-link {
+  display: block;
+  margin-top: 10px;
+  color: #0073e6;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-github-link:hover {
+  color: #005bb5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .project-card {
+      width: 22%; /* Adjust width for slightly smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .project-card {
+      width: 30%; /* Adjust width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+      width: 45%; /* Adjust width for tablets and larger mobile devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card {
+      width: 90%; /* Adjust width for small screens */
+      margin: 10px 0; /* Reduce margin for smaller screens */
+  }
+
+  .project-heading {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+  }
+
+  .project-title {
+      font-size: 1rem; /* Reduce font size for smaller screens */
+  }
+
+  .project-subtitle {
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+  }
+}

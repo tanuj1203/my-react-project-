@@ -1,0 +1,92 @@
+/* About.css */
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 4rem 2rem;
+    background: #0b0b0b;
+    color: black;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  }
+  
+  .image-container {
+    flex: 1;
+    padding-right: 2rem;
+    text-align: center; /* Center image on small screens */
+  }
+  
+  .profile-image1 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-100px); /* Start from above */
+    animation: popIn 1.5s 2s forwards, shapeChange 4s infinite;
+  
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.05); /* Pop-up effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Black outline effect */
+  }
+  
+  .text-container {
+    flex: 2;
+    text-align: center;
+
+  }
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111;
+    font-weight: 700;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+  }
+  
+  .paragraph {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+    color: #555;
+  }
+  
+  .email-link {
+    color: #f15454;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .email-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design */
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center; /* Center text on small screens */
+      padding: 2rem 1rem;
+    }
+  
+    .image-container {
+      padding-right: 0;
+      margin-bottom: 2rem; /* Add space between image and text on small screens */
+    }
+  
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .paragraph {
+      font-size: 1rem;
+    }
+  }
+  
